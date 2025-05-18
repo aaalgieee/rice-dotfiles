@@ -1,0 +1,90 @@
+{
+    "layer": "top",
+    "spacing": 0,
+    "height": 0,
+
+    "margin-top": 0,
+    "margin-right": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [    
+        "cpu",
+        "memory",
+	"tray",
+        "pulseaudio",
+        "battery",
+	"custom/power"
+    ],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "tooltip": false
+    },
+
+    "tray": {
+        "spacing": 5,
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p - %a, %d %b %Y}",
+        "tooltip": false
+    },
+
+    "cpu": {
+        "format": "CPU {avg_frequency}GHz",
+        "interval": 1,
+	"tooltip": false
+
+    },
+
+    "memory": {
+        "format": "MEM {used:0.1f}GiB",
+        "interval": 1,
+	"tooltip": false
+
+    },
+
+    "battery": {
+        "format": "BAT {capacity}%",
+        "interval": 5,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi" : "Wi-Fi {bandwidthDownBits}",
+        "format-ethernet": "ENTH {bandwidthDownBits}",
+        "format-disconnected" : "NO NETWORK",
+        "interval": 5,
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5,
+        "max-volume": 150,
+        "format": "VOL {volume}%",
+        "format-bluetooth": "VOL {volume}%",
+        "nospacing": 1,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "custom/power": {
+	   "format": "⏻",
+	   "on-click": "wlogout"
+
+    }
+}
